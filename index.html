@@ -1,0 +1,16 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/asciinema-player.css" />
+</head>
+<body>
+<div id="player-container"></div>
+<script src="/static/asciinema-player.js"></script>
+<script>
+    var href = document.createElement('a');
+    href.href = window.location.href;
+    var hrefParts = href.pathname.split('/');
+    var url = 'https://gist.githubusercontent.com/' + hrefParts[1] + '/' + hrefParts[2] + '/raw/ascii.json';
+    asciinema_player.core.CreatePlayer('player-container', url);
+</script>
+</body>
+</html>
